@@ -163,8 +163,6 @@
 					·
 					<a href="#">Blog</a>
 					·
-					<a href="#">Pricing</a>
-					·
 					<a href="#">About</a>
 					·
 					<a href="#">Faq</a>
