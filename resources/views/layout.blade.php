@@ -7,7 +7,9 @@
 	{!!HTML::style('/assets/plugins/animated-headline/style.css')!!}
 	{!!HTML::style('/assets/plugins/mega-site-navigation/style.css')!!}
 	{!!HTML::style('/assets/plugins/fixed-background/style.css')!!}
-	{!!HTML::style('/assets/plugins/footer.css')!!}
+	{!!HTML::style('/assets/plugins/footer-distributed/footer-distributed.css')!!}
+	{!!HTML::style('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')!!}
+	{!!HTML::style('http://fonts.googleapis.com/css?family=Cookie')!!}
 	{!!HTML::style('/assets/plugins/top.css')!!}
 	{!!HTML::script('/assets/modernizr.js')!!}
 </head>
@@ -153,12 +155,38 @@
 	<main class="cd-main-content">
 		<!-- your content here -->
 		@yield('content')
-		<footer class="footer">
-			<form class="feedback-form">
-				<label>Feedback</label>
-				<textarea required></textarea>
-				<input type="submit" value="Send">
-			</form>
+		<footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>Jogja<span>nesia</span></h3>
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+				<p class="footer-company-name">Jogjanesia &copy; 2015</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p>Contact Us</p>
+				<form action="#" method="post">
+					<input type="text" name="email" placeholder="Email" required />
+					<textarea name="message" placeholder="Message" required></textarea>
+					<button>Send</button>
+				</form>
+			</div>
 		</footer>
 	</main>
 	<a href="#" class="cd-top">Top</a>
