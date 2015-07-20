@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 <head>
-	<title>{!!isset($pageTitle) ? $pageTitle : 'Home'!!}</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{!!isset($pageTitle) ? $pageTitle : 'Home'!!}</title>
 	{!!HTML::style('/assets/reset.css')!!}
+	{!!HTML::style('/assets/bootstrap/css/bootstrap.css')!!}
+	{!!HTML::style('/assets/bootflat/css/bootflat.css')!!}
 	{!!HTML::style('/assets/plugins/animated-headline/style.css')!!}
 	{!!HTML::style('/assets/plugins/mega-site-navigation/style.css')!!}
 	{!!HTML::style('/assets/plugins/fixed-background/style.css')!!}
 	{!!HTML::style('/assets/plugins/footer-distributed/footer-distributed.css')!!}
 	{!!HTML::style('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')!!}
 	{!!HTML::style('http://fonts.googleapis.com/css?family=Cookie')!!}
-	{!!HTML::style('/assets/plugins/top.css')!!}
+	{!!HTML::style('/assets/plugins/back-to-top/top.css')!!}
 	{!!HTML::script('/assets/modernizr.js')!!}
 </head>
 <body class="nav-is-fixed nav-on-left">
@@ -157,16 +161,13 @@
 		@yield('content')
 		<footer class="footer-distributed">
 			<div class="footer-left">
-				<h3>Jogja<span>nesia</span></h3>
+				<h3>Jogjanesia</h3>
 				<p class="footer-links">
-					<a href="#">Home</a>
-					·
-					<a href="#">Blog</a>
-					·
-					<a href="#">About</a>
-					·
-					<a href="#">Faq</a>
-					·
+					<a href="/">Home</a> -
+					<a href="#">Blog</a> -
+					<a href="#">About</a> -
+					<a href="#">Credits</a> -
+					<a href="#">Faq</a> -
 					<a href="#">Contact</a>
 				</p>
 				<p class="footer-company-name">Jogjanesia &copy; 2015</p>
@@ -189,9 +190,10 @@
 	</main>
 	<a href="#" class="cd-top">Top</a>
 	{!!HTML::script('/assets/jquery-2.1.3.min.js')!!}
+	{!!HTML::script('/assets/bootstrap/js/bootstrap.min.js')!!}
 	{!!HTML::script('/assets/plugins/mega-site-navigation/jquery.mobile.custom.min.js')!!}
 	{!!HTML::script('/assets/plugins/mega-site-navigation/main.js')!!}
 	{!!HTML::script('/assets/plugins/animated-headline/main.js')!!}
-	{!!HTML::script('/assets/plugins/main.js')!!}
+	{!!HTML::script('/assets/plugins/back-to-top/main.js')!!}
 </body>
 </html>

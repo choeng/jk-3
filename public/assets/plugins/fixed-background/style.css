@@ -13,7 +13,7 @@ Modules - reusable parts of our design
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
-  max-width: 768px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -31,22 +31,27 @@ Main components
 -------------------------------- */
 .cd-main-content {
   /* you need to assign a min-height to the main content so that the children can inherit it*/
+  position: relative;
   height: 100%;
 }
 
-.cd-fixed-bg {
+.cd-fixed-bg, .cd-bg {
   position: relative;
-  min-height: 100%;
-  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  z-index: 2;
-  /*-webkit-filter: sepia(40%);
-  filter: sepia(40%);*/
+  z-index: 1;
 }
 
-.cd-fixed-bg h1, .cd-fixed-bg h2 {
+.cd-fixed-bg {
+  min-height: 100%;
+}
+
+.cd-bg {
+  min-height: 70%;
+}
+
+.cd-fixed-bg h1, .cd-fixed-bg h2, .cd-bg h1, .cd-bg h2 {
   font-family: "Oswald", sans-serif;
   position: absolute;
   left: 50%;
@@ -67,6 +72,10 @@ Main components
   color: #ffffff;
 }
 
+.cd-bg h1, .cd-bg h2 {
+  top: 30%;
+}
+
 .cd-fixed-bg.cd-bg-1 {
   background-image: url("/assets/images/tugu.jpg");
 }
@@ -75,9 +84,14 @@ Main components
   background-image: url("/assets/images/malioboro.jpg");
 }
 
+.cd-bg.cd-bg-1  {
+  background-image: url("/assets/images/hotel-jogja.jpg");
+}
+
 @media only screen and (min-width: 768px) {
-  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+  .cd-fixed-bg h1, .cd-fixed-bg h2, .cd-bg h1, .cd-bg h2 {
     font-size: 36px;
+    font-weight: 300;
   }
 }
 
@@ -85,7 +99,7 @@ Main components
   .cd-fixed-bg {
     background-attachment: fixed;
   }
-  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+  .cd-fixed-bg h1, .cd-fixed-bg h2, .cd-bg h1, .cd-bg h2 {
     font-size: 48px;
     font-weight: 300;
   }
@@ -94,25 +108,38 @@ Main components
 .cd-scrolling-bg {
   position: relative;
   min-height: 100%;
-  height: 100vh;
-  padding: 4em 0;
-  line-height: 1.6;
+  padding: 3em 0;
+  line-height: 2;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
 
+.cd-scrolling-bg ol {
+  text-align: center;
+}
+
+.cd-scrolling-bg h1 {
+  text-align: center;
+  font-size: 22px;
+  font-size: 2.2rem;
+  color: rgb(0,0,0);
+  opacity: 0.7;
+  padding-bottom: 2em;
+}
+
+.cd-scrolling-bg p {
+  opacity: 0.7;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
 .cd-scrolling-bg.cd-color {
-  /*background-color: rgb(103,0,0);*/
   background-color: rgb(255,255,255);
   color: rgb(0,0,0);
 }
 
-@media only screen and (min-width: 768px) {
-  .cd-scrolling-bg {
-    padding: 8em 0;
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 2;
-    font-weight: 300;
-  }
+.row {
+  padding-left: 20px;
+  padding-right: 20px;
 }

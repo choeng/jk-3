@@ -16,8 +16,4 @@ Route::get('/', function () {
     return View::make('home');
 });
 
-Route::get('akomodasi/{jenis}','AkomodasiController@view');
-
-Route::get('destinasi/{jenis}','DestinasiController@view');
-
-Route::get('acara-dan-atraksi','AcaraController@view');
+Route::get('tourism-facilities/{facility}','TourismFacilitiesController@view');

@@ -13,6 +13,8 @@ html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -98,6 +100,7 @@ Main components
 .cd-main-content {
   background: #e2e3df;
   min-height: 100vh;
+  height: 100%;
   z-index: 2;
 }
 
@@ -188,7 +191,7 @@ Main components
   overflow: hidden;
   white-space: nowrap;
   /* hide text */
-  color: transparent;
+  color: transparent !important;
   z-index: 4;
 }
 
@@ -417,7 +420,7 @@ Main components
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  will-change: transform, opacity;
+  /*will-change: transform, opacity;*/
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
